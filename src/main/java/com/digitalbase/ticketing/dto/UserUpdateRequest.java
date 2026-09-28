@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Data;import org.springframework.web.multipart.MultipartFile;import java.time.Instant;@Datapublic class UserUpdateRequest {    private String name;    private String phoneNumber;    private String gender;    private Instant dateOfBirth;    private MultipartFile profileImage;}

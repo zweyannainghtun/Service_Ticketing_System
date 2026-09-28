@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Data;@Datapublic class ReviewTicketRequest {    private Integer estimatedMinutes; // Admin မှ ခန့်မှန်းပေးမည့် မိနစ်    private String message; // လိုအပ်ပါက မှတ်ချက်ရေးရန်}
