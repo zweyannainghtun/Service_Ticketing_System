@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Data;import java.time.Instant;@Datapublic class ChatMessageDto {    private String content;    private String senderName;  // ဥပမာ - Megan Fox သို့မဟုတ် System Team    private String senderRole;    private Instant createdAt;}
