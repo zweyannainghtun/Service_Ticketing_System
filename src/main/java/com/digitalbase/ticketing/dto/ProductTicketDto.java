@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Builder;import lombok.Data;@Data@Builderpublic class ProductTicketDto {    private String ticketId;    private String status;    private String issueType;    private String assignedTeam;    private String priority;    private int timeUsedMinutes;}

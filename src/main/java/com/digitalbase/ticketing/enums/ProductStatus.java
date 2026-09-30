@@ -1,1 +1,1 @@
-package com.digitalbase.ticketing.enums;public enum ProductStatus {    ACTIVE,    INACTIVE,    ARCHIVED}
+package com.digitalbase.ticketing.enums;public enum ProductStatus {    ACTIVE,    EXPIRING_SOON,    DISABLED}

@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Data;@Datapublic class HoldTicketRequest {    // ခဏရပ်နားရသည့် အကြောင်းအရင်း (ဥပမာ - "Lunch break", "Waiting for customer reply")    private String reason;}
