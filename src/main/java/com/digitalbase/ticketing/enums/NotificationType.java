@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.enums;public enum NotificationType {    SYSTEM, // SLA သတိပေးချက်များ၊ Account အကြောင်းကြားချက်များအတွက်    TICKET  // Ticket အခြေအနေ ပြောင်းလဲမှုများအတွက်}

@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Builder;import lombok.Data;@Data@Builderpublic class TopNavResponse {    private String headerAvailableCreditText;    private String fullName;}
