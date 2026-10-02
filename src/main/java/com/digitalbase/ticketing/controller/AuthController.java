@@ -1,9 +1,6 @@
 package com.digitalbase.ticketing.controller;
 
-import com.digitalbase.ticketing.dto.AuthResponse;
-import com.digitalbase.ticketing.dto.ForgotPasswordRequest;
-import com.digitalbase.ticketing.dto.LoginRequest;
-import com.digitalbase.ticketing.dto.ResetPasswordRequest;
+import com.digitalbase.ticketing.dto.*;
 import com.digitalbase.ticketing.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -29,9 +26,13 @@ public class AuthController {
         return ResponseEntity.ok(Map.of("message", authService.forgotPassword(request)));
     }
 
+    @PostMapping("/verify-otp")
+    public ResponseEntity<Map<String, String>> verifyOtp(@RequestBody VerifyOtpRequest request) {
+        return ResponseEntity.ok(Map.of("message", authService.verifyOtp(request)));
+    }
+
     @PostMapping("/reset-password")
     public ResponseEntity<Map<String, String>> resetPassword(@RequestBody ResetPasswordRequest request) {
-        // Plain String အစား {"message": "Password has been reset..."} ပုံစံ JSON ဖြင့် ပြန်ပေးမည်
         return ResponseEntity.ok(Map.of("message", authService.resetPassword(request)));
     }
 }
