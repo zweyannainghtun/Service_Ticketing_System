@@ -28,7 +28,7 @@ public class AuthController {
 
     @PostMapping("/verify-otp")
     public ResponseEntity<Map<String, String>> verifyOtp(@RequestBody VerifyOtpRequest request) {
-        return ResponseEntity.ok(Map.of("message", authService.verifyOtp(request)));
+        return ResponseEntity.ok(Map.of("token", authService.verifyOtp(request)));
     }
 
     @PostMapping("/reset-password")
