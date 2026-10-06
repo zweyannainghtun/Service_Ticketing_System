@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.exception;public class FileStorageException extends RuntimeException {    // 👇 ဤ Constructor လေး ထပ်ဖြည့်ပေးပါ    public FileStorageException(String message) {        super(message);    }    public FileStorageException(String message, Throwable cause) {        super(message, cause);    }}
