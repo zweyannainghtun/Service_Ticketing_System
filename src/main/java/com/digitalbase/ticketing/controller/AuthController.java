@@ -1,7 +1,10 @@
 package com.digitalbase.ticketing.controller;
 
 import com.digitalbase.ticketing.dto.*;
+import com.digitalbase.ticketing.model.User;
 import com.digitalbase.ticketing.service.AuthService;
+import com.digitalbase.ticketing.service.DeviceTrackingService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,10 +17,18 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthService authService;
+    private final DeviceTrackingService deviceTrackingService; // Device Tracking Service ကို Inject လုပ်ရန်
 
     @PostMapping("/login")
-    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
-        return ResponseEntity.ok(authService.login(request));
+    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request, HttpServletRequest httpRequest) {
+        // ၁။ Email & Password စစ်ဆေး၍ Login ဝင်ခြင်း (Token ထုတ်ပေးခြင်း)
+        AuthResponse response = authService.login(request);
+
+        // ၂။ Login အောင်မြင်ပါက User Object ကိုယူ၍ Device Tracking လုပ်ခြင်း
+        User loggedInUser = authService.getUserByEmail(request.getEmail());
+        deviceTrackingService.trackDevice(loggedInUser, httpRequest);
+
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/forgot-password")

@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.service;import com.digitalbase.ticketing.model.User;import jakarta.servlet.http.HttpServletRequest;public interface DeviceTrackingService {    void trackDevice(User user, HttpServletRequest request);}
