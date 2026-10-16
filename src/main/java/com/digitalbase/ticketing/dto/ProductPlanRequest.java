@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Data;import java.math.BigDecimal;@Datapublic class ProductPlanRequest {    private String planName;    private String description;    private BigDecimal price;    private Long durationDays;    private Integer totalMinutes;    private Long productId;    private boolean active = true;}

@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Data;@Datapublic class IpLocationResponse {    private String status;    private String city;    private String country;}

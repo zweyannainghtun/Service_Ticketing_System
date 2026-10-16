@@ -1,1 +1,1 @@
-package com.digitalbase.ticketing.enums;public enum Role {    CLIENT,    ADMIN,    DEVELOPER}
+package com.digitalbase.ticketing.enums;public enum Role {    CLIENT,    SERVICE_ADMIN,    ADMIN,    DEVELOPER}
