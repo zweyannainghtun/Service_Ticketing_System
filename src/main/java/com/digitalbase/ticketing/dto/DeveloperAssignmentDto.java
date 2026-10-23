@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import lombok.Data;@Datapublic class DeveloperAssignmentDto {    private Long developerId;    private Integer allocatedMinutes; // 🎯 ဒီ Developer အတွက် သီးသန့်ပေးမည့် မိနစ် (Countdown အတွက်)}
