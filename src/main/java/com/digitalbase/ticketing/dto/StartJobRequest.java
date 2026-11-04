@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.dto;import jakarta.validation.constraints.NotNull;import lombok.Data;@Datapublic class StartJobRequest {    private String message;    @NotNull(message = "Estimate time is required")    private Integer estimatedMinutes; // 👈 ဤ Field အသစ်ထည့်ရန်}

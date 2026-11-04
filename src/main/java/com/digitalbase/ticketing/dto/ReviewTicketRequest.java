@@ -1,1 +1,1 @@
-package com.digitalbase.ticketing.dto;import com.digitalbase.ticketing.enums.Priority;import lombok.Data;@Datapublic class ReviewTicketRequest {    private Integer estimatedMinutes;    private String message;    // ---> ဤ Field အသစ်ကို ထပ်ဖြည့်ပါ <---    private Priority priority;}
+package com.digitalbase.ticketing.dto;import com.digitalbase.ticketing.enums.Priority;import lombok.Data;@Datapublic class ReviewTicketRequest {    private String message;    // ---> ဤ Field အသစ်ကို ထပ်ဖြည့်ပါ <---    private Priority priority;}
