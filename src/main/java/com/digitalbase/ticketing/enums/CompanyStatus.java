@@ -1,0 +1,1 @@
+package com.digitalbase.ticketing.enums;public enum CompanyStatus {    ACTIVE,    INACTIVE}
