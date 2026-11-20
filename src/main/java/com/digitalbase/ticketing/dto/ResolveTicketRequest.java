@@ -1,1 +1,1 @@
-package com.digitalbase.ticketing.dto;import lombok.Data;@Datapublic class ResolveTicketRequest {    private String resolutionMessage; // ဖြေရှင်းခဲ့ပုံ မှတ်ချက် (ဥပမာ - "Fixed the database connection issue")}
+package com.digitalbase.ticketing.dto;import lombok.Data;@Datapublic class ResolveTicketRequest {    private String resolutionMessage;    private Integer extraMinutes; // Optional: မူလ Estimate ထက် ပိုကြာသွားသော Extra မိနစ်}
